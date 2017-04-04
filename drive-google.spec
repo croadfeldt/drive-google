@@ -1,10 +1,10 @@
 %global debug_package   %{nil}
 %global bname           drive
-%global commit          a9f53bc4cc9d9d2eada836602ad4b4a7902424a6
+%global commit          52aed62548f4c408a3042cd2375661ac869d7710
 %global commit_short    %(c=%{commit}; echo ${c:0:7})
 
 Name:           %{bname}-google
-Version:        0.3.9
+Version:        0.3.9.1
 Release:        1.%{commit_short}%{?dist}
 Summary:        Pull or push Google Drive files
 License:        ASL 2.0
@@ -81,6 +81,10 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Apr 04 2017 Vaughan <devel at agrez dot net> - 0.3.9.1-1.52aed62
+- New release
+- Update to git commit: 52aed62548f4c408a3042cd2375661ac869d7710
+
 * Sun Jan 15 2017 Vaughan <devel at agrez dot net> - 0.3.9-1.a9f53bc
 - New release
 - Update to git commit: a9f53bc4cc9d9d2eada836602ad4b4a7902424a6
