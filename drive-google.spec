@@ -11,7 +11,7 @@ License:        ASL 2.0
 URL:            http://github.com/odeke-em/drive
 Source0:        https://github.com/odeke-em/drive/archive/%{commit}.tar.gz#/%{bname}-%{commit_short}.tar.gz
 BuildRequires:  gcc
-BuildRequires:  golang
+BuildRequires:  golang >= 1.7.0
 BuildRequires:  git
 
 
