@@ -5,7 +5,7 @@
 
 Name:           %{bname}-google
 Version:        0.3.9.1
-Release:        1.%{commit_short}%{?dist}
+Release:        2.%{commit_short}%{?dist}
 Summary:        Pull or push Google Drive files
 License:        ASL 2.0
 URL:            http://github.com/odeke-em/drive
@@ -49,28 +49,8 @@ install -p -m 0755 %{bname}-server/%{bname}-server %{buildroot}%{_bindir}/
 
 install -d %{buildroot}%{_datadir}/icons/hicolor/128x128/mimetypes
 install -p -m 0644 icons/*.png %{buildroot}%{_datadir}/icons/hicolor/128x128/mimetypes/
-
 install -d %{buildroot}%{_datadir}/icons/hicolor/scalable/mimetypes
 install -p -m 0644 icons/*.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/mimetypes/
-
-
-%post
-/bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
-
-
-%postun
-if [ $1 -eq 0 ] ; then
-    /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
-    /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
-fi
-
-
-%posttrans
-/usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
-
-
-%clean
-rm -rf %{buildroot}
 
 
 %files
@@ -81,6 +61,10 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Nov 10 2018 Vaughan <devel at agrez dot net> - 0.3.9.1-2.52aed62
+- Rebuild for f29
+- Clean spec
+
 * Tue Apr 04 2017 Vaughan <devel at agrez dot net> - 0.3.9.1-1.52aed62
 - New release
 - Update to git commit: 52aed62548f4c408a3042cd2375661ac869d7710
