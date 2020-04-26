@@ -5,7 +5,7 @@
 
 Name:           %{bname}-google
 Version:        0.3.9.1
-Release:        3.%{commit_short}%{?dist}
+Release:        4.%{commit_short}%{?dist}
 Summary:        Pull or push Google Drive files
 License:        ASL 2.0
 URL:            http://github.com/odeke-em/drive
@@ -61,6 +61,9 @@ install -p -m 0644 icons/*.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/mi
 
 
 %changelog
+* Sun Apr 26 2020 Vaughan <devel at agrez dot net> - 0.3.9.1-4.52aed62
+- Rebuild for f31/32
+
 * Mon May 27 2019 Vaughan <devel at agrez dot net> - 0.3.9.1-3.52aed62
 - Rebuild for f30
 
