@@ -1,11 +1,11 @@
 %global debug_package   %{nil}
 %global bname           drive
-%global commit          52aed62548f4c408a3042cd2375661ac869d7710
+%global commit          a42ab82225d2c9cc370926d6f0055a7039979e66
 %global commit_short    %(c=%{commit}; echo ${c:0:7})
 
 Name:           %{bname}-google
 Version:        0.3.9.1
-Release:        4.%{commit_short}%{?dist}
+Release:        5.%{commit_short}%{?dist}
 Summary:        Pull or push Google Drive files
 License:        ASL 2.0
 URL:            http://github.com/odeke-em/drive
