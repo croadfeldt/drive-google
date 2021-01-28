@@ -1,11 +1,11 @@
 %global debug_package   %{nil}
 %global bname           drive
-%global commit          a42ab82225d2c9cc370926d6f0055a7039979e66
+%global commit          c3cc0b591b5777e1141715cecbb910a74f38fb79
 %global commit_short    %(c=%{commit}; echo ${c:0:7})
 
 Name:           %{bname}-google
-Version:        0.3.9.1
-Release:        5.%{commit_short}%{?dist}
+Version:        0.4.0
+Release:        1.%{commit_short}%{?dist}
 Summary:        Pull or push Google Drive files
 License:        ASL 2.0
 URL:            http://github.com/odeke-em/drive
@@ -61,6 +61,9 @@ install -p -m 0644 icons/*.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/mi
 
 
 %changelog
+* Thu Jan 28 2021 Chris Roadfeldt <chris@roadfeldt.com> - 0.4.0-1.c3cc0b59
+- Update to git c3cc0b591b5777e1141715cecbb910a74f38fb79
+
 * Sun Apr 26 2020 Vaughan <devel at agrez dot net> - 0.3.9.1-4.52aed62
 - Rebuild for f31/32
 
